@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni-Intelligence Sandbox - Dashboard</title>
+    <link rel="stylesheet" href="style_core.css">
+    <link rel="stylesheet" href="style_modules.css">
+</head>
+<body>
+
+    <div id="custom-pointer"></div>
+
+    <div class="dashboard-wrapper">
+        <header class="app-header">
+            <h1>Omni-Telemetry Matrix Workspace</h1>
+            <p>Advanced real-time structural simulation and diagnostic canvas mesh</p>
+            <a href="index.html" class="action-btn sm" style="text-decoration:none; display:inline-block; margin-top:8px;">← Disconnect Core Portal</a>
+        </header>
+
+        <!-- CONFIGURATION CONTROLS -->
+        <div class="panel-title">Workspace Customization & Variable Control</div>
+        <div class="control-panel grid-4">
+            <div class="control-group">
+                <label>Matrix Color Tint (RGB)</label>
+                <input type="color" id="theme-color-picker" value="#2997ff">
+            </div>
+            <div class="control-group">
+                <label>Pointer Aura Style</label>
+                <select id="pointer-style-selector">
+                    <option value="default">Default OS Pointer</option>
+                    <option value="quantum">Quantum Dynamic Aura</option>
+                    <option value="precision">Crosshair Precision Dot</option>
+                    <option value="stealth">Ghost Light Trail</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Oscillator Tone Volume</label>
+                <input type="range" id="audio-volume-slider" min="0" max="100" value="15">
+            </div>
+            <div class="control-group">
+                <label>Parallel Worker Pool</label>
+                <select id="stressor-threads-selector">
+                    <option value="1">1 Active WebWorker</option>
+                    <option value="2">2 Parallel Workers</option>
+                    <option value="4">4 Parallel Workers</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 50+ VARIABLE INSTRUMENTATION GRID -->
+        <div class="panel-title">Chrono, Energy, Performance & Localization Specs</div>
+        <div class="metrics-grid">
+            <div class="metric-card"><label>Graphics Render Rate</label><div class="metric-value visual-alert-target" id="fps-val">60 FPS</div></div>
+            <div class="metric-card"><label>Primary Thread Delay</label><div class="metric-value" id="thread-latency">0.0 ms</div></div>
+            <div class="metric-card"><label>JS Memory Heap Size</label><div class="metric-value" id="heap-used">Checking...</div></div>
+            <div class="metric-card"><label>JS Heap Bounds Limit</label><div class="metric-value" id="heap-limit">Checking...</div></div>
+            <div class="metric-card"><label>Core Pool Thread Capacity</label><div class="metric-value" id="cpu-cores">Checking...</div></div>
+            <div class="metric-card"><label>Energy Cell Capacity</label><div class="metric-value" id="battery-percent">Checking...</div></div>
+            <div class="metric-card"><label>Energy Link State</label><div class="metric-value" id="battery-state">Checking...</div></div>
+            <div class="metric-card"><label>System Up-Time Index</label><div class="metric-value" id="uptime-val">0.0s</div></div>
+            <div class="metric-card"><label>Local System Chrono</label><div class="metric-value" id="local-time">00:00:00</div></div>
+            <div class="metric-card"><label>UTC Global Timestamp</label><div class="metric-value" id="utc-time" style="font-size:14px;">00:00:00</div></div>
+            <div class="metric-card"><label>Active Timezone Context</label><div class="metric-value" id="timezone-val" style="font-size:13px;">Checking...</div></div>
+            <div class="metric-card"><label>Localization Idiom</label><div class="metric-value" id="language-val">Checking...</div></div>
+            <div class="metric-card"><label>X-Y Interaction Pixel</label><div class="metric-value" id="pointer-coordinates">X: 0 | Y: 0</div></div>
+            <div class="metric-card"><label>Orientation Angle Beta</label><div class="metric-value" id="gyro-b">0°</div></div>
+            <div class="metric-card"><label>Orientation Angle Gamma</label><div class="metric-value" id="gyro-g">0°</div></div>
+            <div class="metric-card"><label>Device Maximum Touch Nodes</label><div class="metric-value" id="touch-points">Checking...</div></div>
+            <div class="metric-card"><label>Hardware Audio Node Rate</label><div class="metric-value" id="audio-rate">Checking...</div></div>
+            <div class="metric-card"><label>Network RTT Quality Index</label><div class="metric-value" id="net-rtt">Checking...</div></div>
+            <div class="metric-card"><label>Max Inbound Bandwidth</label><div class="metric-value" id="net-downlink">Checking...</div></div>
+            <div class="metric-card"><label>Browser Engine Framework</label><div class="metric-value" id="browser-engine" style="font-size:14px;">Checking...</div></div>
+            <div class="metric-card"><label>Display Pipeline Size</label><div class="metric-value" id="display-pipeline">Checking...</div></div>
+            <div class="metric-card"><label>Viewport Canvas Dimension</label><div class="metric-value" id="viewport-dim">Checking...</div></div>
+            <div class="metric-card"><label>Color Depth Scale</label><div class="metric-value" id="color-depth">Checking...</div></div>
+            <div class="metric-card"><label>Device Pixel Scaling Ratio</label><div class="metric-value" id="pixel-ratio">Checking...</div></div>
+            <div class="metric-card"><label>Online Status Flag</label><div class="metric-value" id="online-flag">Checking...</div></div>
+            <div class="metric-card"><label>Cookie Tracking Clearance</label><div class="metric-value" id="cookie-clear">Checking...</div></div>
+            <div class="metric-card"><label>Storage Allocation State</label><div class="metric-value" id="storage-persist" style="font-size:14px;">Checking...</div></div>
+            <div class="metric-card"><label>Hardware Gamepads Synced</label><div class="metric-value" id="gamepads-count">0 Synced</div></div>
+        </div>
+
+        <div class="metrics-grid" style="margin-top:12px;">
+            <div class="metric-card" style="grid-column: span 2;"><label>GPU Hardware Accelerator String</label><div class="metric-value" id="gpu-val" style="font-size:13px; line-height:1.4;">Checking...</div></div>
+            <div class="metric-card" style="grid-column: span 2;"><label>Environment Engine Target String</label><div class="metric-value" id="ua-val" style="font-size:11px; line-height:1.4; color:var(--text-secondary);">Checking...</div></div>
+        </div>
+
+        <!-- GRAPH CANVAS VISUALIZATION -->
+        <div class="panel-title">Multi-Axis Analytical Telemetry Canvas Timeline</div>
+        <div class="graph-panel">
+            <div class="graph-header">
+                <h3>Thread Latency vs Frame Velocity Timeline</h3>
+                <div class="graph-legend">
+                    <span class="legend-item blue" id="legend-latency">Latency (ms)</span>
+                    <span class="legend-item green" id="legend-fps">Frame Rate (FPS)</span>
+                    <span class="legend-item purple" id="legend-mem">Heap (MB)</span>
+                </div>
+            </div>
+            <div class="canvas-box">
+                <canvas id="telemetry-chart"></canvas>
+            </div>
+        </div>
+
+        <!-- SIMULATORS & HARDWARE TESTING -->
+        <div class="panel-title">High-Interaction Playground Utilities & Audio Modulators</div>
+        <div class="gadget-grid grid-2">
+            <div class="gadget-card">
+                <h4>Frequency Oscillator Array (Web Audio API)</h4>
+                <p>Synthesizes real-time sound frequencies directly through custom wave generators.</p>
+                <div class="button-row">
+                    <button class="action-btn" onclick="triggerAudioPulse(440, 'sine')">440Hz Sine</button>
+                    <button class="action-btn" onclick="triggerAudioPulse(330, 'triangle')">330Hz Triangle</button>
+                    <button class="action-btn" onclick="triggerAudioPulse(220, 'sawtooth')">220Hz Sawtooth</button>
+                    <button class="action-btn" onclick="triggerAudioPulse(110, 'square')">110Hz Square</button>
+                </div>
+            </div>
+            <div class="gadget-card">
+                <h4>Multi-Threaded Worker Stress Array</h4>
+                <p>Spawns background tasks over isolated parallel WebWorker contexts to run high-concurrency math operations without locking up the user interface.</p>
+                <div class="button-row">
+                    <button class="action-btn" onclick="executeCoreStressBenchmark()">Run Local Thread Test</button>
+                    <button class="action-btn danger" onclick="triggerHyperStressLoop()">Launch Multi-Threaded Stress Loop</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SANDBOX STORAGE MAPS -->
+        <div class="panel-title">Isolated Origin Storage Allocation Environments</div>
+        <div class="storage-grid">
+            <div class="storage-card">
+                <label>LocalStorage Sandbox</label><div class="storage-value" id="local-storage-status">0 Keys</div>
+                <button class="action-btn sm" onclick="commitStorageRecord('local')">Commit Test Entry</button>
+            </div>
+            <div class="storage-card">
+                <label>SessionStorage Sandbox</label><div class="storage-value" id="session-storage-status">0 Keys</div>
